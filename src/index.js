@@ -1,7 +1,9 @@
 const express = require('express');
+const cors = require('cors');
 const { v4: uuid } = require('uuid')
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 
 const projects = []; // deletar ao colocar em produção
